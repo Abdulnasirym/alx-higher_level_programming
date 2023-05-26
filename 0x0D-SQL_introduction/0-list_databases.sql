@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+-- list all databasesof mysql server
 
 SHOW DATABASES;
