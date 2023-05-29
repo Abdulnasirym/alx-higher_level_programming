@@ -1,3 +1,4 @@
 -- creates database and table
 CREATE DATABASE IF NOT EXIST hbtn_0d_usa;
-CREATE TABLE IF NOT EXISTS hbtn_0d_usa.cities(PRIMARY KEY(id), id INT UNIQUE AUTO_INCREMENT NOT NULL, state_id INT NOT NULL, name VARCHAR(256) NOT NULL, FOREIGN KEY(state_id) REFERENCES hbtn_0d_usa.states(id));
+USE hbtn_0d_usa;
+CREATE TABLEIF NOT EXISTS cities(id INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY, state_id INT NOT NULL, name VARCHAR(256) NOT NULL, FOREIGN KEY (state_id) REFERENCES states(id));
