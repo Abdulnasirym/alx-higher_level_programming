@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 start = ord('a')
 stop = ord('z')
 
