@@ -1,6 +1,3 @@
 #!/usr/bin/python3
-i = ord('a')
-
-while i <= ord('z'):
-    print(chr(i))
-    i = i + 1
+for i in range(ord('a'), ord('z') + 1):
+    print("{:s}".format(chr(i)), end = "")
