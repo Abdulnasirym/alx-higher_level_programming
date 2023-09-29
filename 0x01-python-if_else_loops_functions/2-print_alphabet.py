@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for i in range(ord('a'), ord('z') + 1):
-    print("{:s}".format(chr(i)), end="")
+start = ord('a')
+stop = ord('z') + 1
+for i in range(start, stop):
+    print("{:c}".format(i), end='')
