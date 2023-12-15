@@ -8,4 +8,3 @@ def search_replace(my_list, search, replace):
             new_list[index_replace] = replace
 
     return new_list
-
