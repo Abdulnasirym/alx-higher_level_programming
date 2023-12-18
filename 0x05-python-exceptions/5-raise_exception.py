@@ -1,3 +1,4 @@
 #!/usr/bin/pyhton3
 def raise_exception():
-    raise TypeError
+    class CustomError(Exception):
+        raise TypeError
