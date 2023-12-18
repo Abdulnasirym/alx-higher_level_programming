@@ -2,3 +2,4 @@
 def raise_exception():
     class CustomError(Exception):
         raise TypeError
+        pass
