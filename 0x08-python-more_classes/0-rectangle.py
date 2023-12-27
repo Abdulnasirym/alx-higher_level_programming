@@ -1,5 +1,5 @@
 #!/usr/bin/pyhton3
-"""Defines a rectangle class""
+"""Defines a rectangle class"""
 
 
 class Rectangle():
