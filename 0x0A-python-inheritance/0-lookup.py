@@ -2,4 +2,4 @@
 
 
 def lookup(obj):
-    return list(obj.__dict__.keys())
+    return dir(obj)
