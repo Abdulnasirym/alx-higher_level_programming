@@ -23,11 +23,12 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
     """Inherited from Basegeometry"""
 
     def __init__(self, width, height):
         self.__width = width
-        self.__height =height
+        self.__height = height
         super().integer_validator("width", width)
         super().integer_validator("height", height)
