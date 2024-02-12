@@ -18,9 +18,4 @@ def add_integer(a, b=98):
     if (isinstance(a, float) or isinstance(b, float)):
         a = int(a)
         b = int(b)
-    return (int(a) + int(b))
-
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testfile("tests/0-add_integer.txt")
+        return (a + b)
