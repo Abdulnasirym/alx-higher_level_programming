@@ -1,3 +1,4 @@
+"""
 >>> from 0-add_integer import add_integer
 >>> add(5, 2)
 7
@@ -5,3 +6,4 @@
 5
 >>> add(0, 6)
 6
+"""
