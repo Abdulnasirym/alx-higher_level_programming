@@ -45,7 +45,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_area(self):
         """Testing the area of the rectangle"""
-        rectangle = Rectangle(width=3, height=4)
+        rectangle = Rectangle(width=3, height=4, x=2, y=5, id=2)
         self.assertEqual(rectangle.area(), 12)
 
 
