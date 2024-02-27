@@ -8,14 +8,14 @@
 import unittest
 from models.base import Base
 
+
 class BaseTest(unittest.TestCase):
     """Unittests for testing instantiation of the Base class."""
-
     def test_instancewith_id(self):
         """test when id is provided"""
         obj = Base(id=20)
         self.assertEqual(obj.id, 20)
-    
+
     def test_instancewithout_id(self):
         """test when id is not provided"""
         obj1 = Base()
@@ -23,6 +23,7 @@ class BaseTest(unittest.TestCase):
 
         self.assertEqual(obj1.id, 1)
         self.assertEqual(obj2.id, 2)
+
 
 if __name__ == "__main__":
     unittest.main()
