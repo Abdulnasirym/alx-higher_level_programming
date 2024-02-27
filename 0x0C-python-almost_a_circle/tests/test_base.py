@@ -2,14 +2,14 @@
 """Defines unittests for base.py.
 
         Unittest classes:
-            BaseTest
+            TestBase
 """
 
 import unittest
 from models.base import Base
 
 
-class BaseTest(unittest.TestCase):
+class TestBase(unittest.TestCase):
     """Unittests for testing instantiation of the Base class."""
     def test_instancewith_id(self):
         """test when id is provided"""
