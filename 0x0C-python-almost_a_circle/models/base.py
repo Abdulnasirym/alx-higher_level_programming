@@ -3,6 +3,7 @@
     Creating the base class for all classes
 """
 
+
 class Base:
     """Base model
 
