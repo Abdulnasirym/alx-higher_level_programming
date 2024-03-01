@@ -1,10 +1,11 @@
 import unittest
 from models.rectangle import Rectangle
+"""Testing the Rectangle class that inherits from base"""
+
 
 class TestRectangle(unittest.TestCase):
-
+    """testing the class"""
     def test_constructor_with_id(self):
-        # Test constructor with provided id
         rectangle = Rectangle(id=1, width=5, height=3, x=2, y=1)
         self.assertEqual(rectangle.id, 1)
         self.assertEqual(rectangle.width, 5)
@@ -13,16 +14,13 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle.y, 1)
 
     def test_constructor_without_id(self):
-        # Test constructor without provided id
         rectangle = Rectangle(width=5, height=3, x=2, y=1)
-        self.assertEqual(rectangle.id, 2)  # __nb_objects starts at 1 and gets incremented
+        self.assertEqual(rectangle.id, 2)
 
-        # Test multiple instances without provided id
         rectangle2 = Rectangle(width=7, height=4, x=1, y=3)
         self.assertEqual(rectangle2.id, 3)
 
     def test_setters(self):
-        # Test setters with valid values
         rectangle = Rectangle(width=5, height=3, x=2, y=1)
 
         rectangle.width = 10
@@ -37,7 +35,6 @@ class TestRectangle(unittest.TestCase):
         rectangle.y = 5
         self.assertEqual(rectangle.y, 5)
 
-        # Test setters with invalid values
         with self.assertRaises(TypeError) as context:
             rectangle.width = "invalid_width"
         self.assertEqual(str(context.exception), "width must be an integer")
@@ -70,6 +67,6 @@ class TestRectangle(unittest.TestCase):
             rectangle.y = -2
         self.assertEqual(str(context.exception), "y must be >= 0")
 
+
 if __name__ == '__main__':
     unittest.main()
-
