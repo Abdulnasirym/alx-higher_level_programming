@@ -1,8 +1,10 @@
+#!/usr/bin/python3
 from models.base import Base
-""" creating a Rectangle class that inherits from Base"""
+"""class Rectangle"""
 
 
 class Rectangle(Base):
+    """Defines the rectangle class that inherits from base"""
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
