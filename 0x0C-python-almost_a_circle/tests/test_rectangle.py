@@ -43,10 +43,29 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle.width, 15)
         self.assertEqual(retangle.height, 11)
 
-    def test_area(self):
-        rectangle = Rectangle(width=10, height=2)
+    def test_width(self):
+        """Test for invalid width"""
+        rectangle = Rectangle(width=10, height=5, x=2, y=3)
 
-        self.assertEqual(rectangle.area, 20)
+        with self.assertRaises(TypeError) as context:
+            rectangle.width = "invalid_width"
+        self.assertEqual(str(context.exception), "width must be an integer")
+
+        with self.assertRaises(ValueError) as context:
+            rectangle.width = -5
+        self.assertEqual(str(context.exception), "width must be > 0")
+
+    def test_height(self):
+        """Test for invalid width"""
+        rectangle = Rectangle(width=10, height=5, x=2, y=3)
+
+        with self.assertRaises(TypeError) as context:
+            rectangle.height = "invalid_height"
+        self.assertEqual(str(context.exception), "height must be an integer")
+
+        with self.assertRaises(ValueError) as context:
+            rectangle.height = 0
+        self.assertEqual(str(context.exception), "height must be > 0")
 
 
 if __name__ == "__main__":
