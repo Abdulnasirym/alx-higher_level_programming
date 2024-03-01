@@ -43,6 +43,11 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle.width, 15)
         self.assertEqual(retangle.height, 11)
 
+    def test_area(self):
+        rectangle = Rectangle(width=10, height=2)
+
+        self.assertEqual(rectangle.area, 20)
+
 
 if __name__ == "__main__":
     unittest.main()
