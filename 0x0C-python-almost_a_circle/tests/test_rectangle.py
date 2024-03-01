@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-# test_rectangle.py
-# Brennan D Baraban <375@holbertonschool.com>
+
 """Defines unittests for models/rectangle.py.
 
 Unittest classes:
@@ -472,7 +471,6 @@ class TestRectangle_stdout(unittest.TestCase):
         sys.stdout = sys.__stdout__
         return capture
 
-    # Test __str__ method
     def test_str_method_print_width_height(self):
         r = Rectangle(4, 6)
         capture = TestRectangle_stdout.capture_stdout(r, "print")
@@ -506,7 +504,6 @@ class TestRectangle_stdout(unittest.TestCase):
         with self.assertRaises(TypeError):
             r.__str__(1)
 
-    # Test display method
     def test_display_width_height(self):
         r = Rectangle(2, 3, 0, 0, 0)
         capture = TestRectangle_stdout.capture_stdout(r, "display")
@@ -538,7 +535,6 @@ class TestRectangle_stdout(unittest.TestCase):
 class TestRectangle_update_args(unittest.TestCase):
     """Unittests for testing update args method of the Rectangle class."""
 
-    # Test args
     def test_update_args_zero(self):
         r = Rectangle(10, 10, 10, 10, 10)
         r.update()
