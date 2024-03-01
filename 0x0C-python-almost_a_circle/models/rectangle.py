@@ -21,45 +21,48 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, new_width):
-        if type(new_width) is not int:
-            raise TypeError("width must be an integer")
-        if new_width <= 0:
-            raise ValueError("width must be > 0")
-        self.__width = new_width
+    def width(self, value):
+        self.validate_positive_integer(value, 'width')
+        self.__width = value
 
     @property
     def height(self):
         return self.__height
 
     @height.setter
-    def height(self, new_height):
-        if type(new_height) is not int:
-            raise TypeError("height must be an integer")
-        if new_height <= 0:
-            raise ValueError("height must be > 0")
-        self.__height = new_height
+    def height(self, value):
+        self.validate_positive_integer(value, 'height')
+        self.__height = value
 
     @property
     def x(self):
         return self.__x
 
     @x.setter
-    def x(self, new_x):
-        if type(new_x) is not int:
-            raise TypeError("x must be an integer")
-        if new_x < 0:
-            raise ValueError("x must be >= 0")
-        self.__x = new_x
+    def x(self, value):
+        self.validate_non_negative_integer(value, 'x')
+        self.__x = value
 
     @property
     def y(self):
         return self.__y
 
     @y.setter
-    def y(self, new_y):
-        if type(new_y) is not int:
-            raise TypeError("y must be an integer")
-        if new_y < 0:
-            raise ValueError("y must be >= 0")
-        self.__y = new_y
+    def y(self, value):
+        self.validate_non_negative_integer(value, 'y')
+        self.__y = value
+
+    def validate_positive_integer(self, value, attribute_name):
+        if not isinstance(value, int):
+            raise TypeError(f"{attribute_name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{attribute_name} must be > 0")
+
+    def validate_non_negative_integer(self, value, attribute_name):
+        if not isinstance(value, int):
+            raise TypeError(f"{attribute_name} must be an integer")
+        if value < 0:
+            raise ValueError(f"{attribute_name} must be >= 0")
+
+    def area(self):
+        return self.__width * self.__height
