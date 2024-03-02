@@ -176,5 +176,6 @@ class Base:
     def load_from_file_csv(cls):
         '''
             this is my method
+        
         '''
         return ([])
