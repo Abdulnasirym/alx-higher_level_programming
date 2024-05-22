@@ -1,2 +1,2 @@
--- prints descriptionof table
-DESCRIBE first_table
+-- prints description of table
+DESC first_table
