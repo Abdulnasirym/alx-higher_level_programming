@@ -5,7 +5,7 @@ const intValue = parseInt(value);
 if (isNaN(intValue)) {
   console.log("Missing number of occurences");
 } else {
-  for (let i = 0; i < intValue; i++) {
+  for (let i = 0; i < value; i++) {
     console.log("C is fun");
   }
 }
