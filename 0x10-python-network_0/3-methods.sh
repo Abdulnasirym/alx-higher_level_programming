@@ -1,3 +1,3 @@
 #!/bin/bash
 #Displays all HTTP methods server will accept
-curl -sV "$1"
+curl -sI "$1" | grep "Allow" | cut -d " " -f 2-
