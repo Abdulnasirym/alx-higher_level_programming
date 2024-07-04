@@ -1,3 +1,3 @@
 #!/bin/bash
 #Sends request to a URL
-curl -sI "$1" | grep "HTTP" | cut -d " " -f 2 
+curl -sIL "$1" | grep "HTTP" | cut -d " " -f 2 
