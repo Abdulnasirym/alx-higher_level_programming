@@ -11,8 +11,8 @@ import urllib.parse
 
 
 url = sys.argv[1]
-email = sys.argv[2]
-data = urllib.parse.urlencode({"email": email}).encode("ascii")
+value = {"email": sys.argv[2]}
+data = urllib.parse.urlencode(value).encode("ascii")
 
 output = urllib.request.Request(url, data)
 with urllib.request.urlopen(output) as resp:
