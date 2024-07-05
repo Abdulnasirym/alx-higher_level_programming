@@ -10,3 +10,4 @@ if __name__ == "__main__":
     value = {"email": email}
 
     response = requests.post(url, value)
+    print(response.text)
