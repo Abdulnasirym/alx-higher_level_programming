@@ -7,8 +7,8 @@ import requests
 if __name__ == "__main__":
     url = sys.argv[1]
 
-    response = requests.get(url)
+    r = requests.get(url)
     if response.status_code >= 400:
-        print("Error code: {}", .format(response.status_code))
+        print("Error code: ", r.status_code)
     else:
-        print(response.text)
+        print(r.text)
