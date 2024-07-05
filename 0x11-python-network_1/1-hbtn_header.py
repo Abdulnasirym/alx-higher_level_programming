@@ -6,10 +6,5 @@ import sys
 
 url = sys.argv[1]
 
-try:
-    with urllib.request.urlopen(url) as resp:
-        output = resp.headers.get('X-Request-Id')
-        if output:
-            print(output)
-except urllib.error.URLError as e:
-    print("Error")
+with urllib.request.urlopen(url) as resp:
+    print(dict(resp.headers).get('X-Request-Id'))
