@@ -5,6 +5,11 @@ import urllib.request
 import sys
 
 url = sys.argv[1]
-with urllib.request.urlopen(url) as resp:
-    output = resp.headers.get('X-Request-Id')
-    print(output)
+
+try:
+    with urllib.request.urlopen(url) as resp:
+        output = resp.headers.get('X-Request-Id')
+        if output:
+            print(output)
+except urllib.error.URLError as e:
+    print("Error")
