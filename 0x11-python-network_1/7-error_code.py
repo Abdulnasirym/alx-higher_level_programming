@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ ends a request to the URL and displays the body of the response. """
-import requests
 import sys
+import requests
 
 
 if __name__ == "__main__":
