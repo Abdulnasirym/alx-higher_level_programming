@@ -4,7 +4,7 @@ $(document).ready(function () {
     
         const APIurl = `https://www.fourtonfish.com/hellosalut/hello/?lang=${langCode}`;
         $.get(APIurl, function(data) {
-            $('#hello').text(data.hello);
+            $('DIV#hello').html(data.hello);
         });
     });
 });
